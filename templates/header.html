@@ -11,12 +11,12 @@
 <header>
 	<div class="navbar-header">
       <a class="navbar-brand" href="/">
-	  <!--<img style="max-width:120px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.jpg') }}">-->
+	  <img style="max-width:120px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.jpg') }}">
 	  </a>
     </div>
 
 	<div class = "container-fluid">
-		<a href="/newnote/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 30px; margin-bottom: 5px; height: 44px; margin-right: 15px">
+		<a href="/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 30px; margin-bottom: 5px; height: 44px; margin-right: 15px">
 			<span class="glyphicon glyphicon-file" aria-hidden="true"></span> New Book </button></a>
 	
 		<ul class="nav navbar-nav navbar-right">
@@ -68,9 +68,7 @@
 									</dd>
 				
 									<dt><label for="email">Email Address</label>
-									<dd><input id="email" name="email" type="text" value=""></dd>
-									<dd>
-										<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+									<dd><input id="email" name="email" type="text" value="">
 									</dd>
 
 									<dt><label for="password">New Password</label>
@@ -104,22 +102,10 @@
 </header>
 
 <body>
+	<div class="border-row" style="width:100%; margin-bottom: 15px;"></div>
 
-	<ul class="nav nav-tabs" id="myTab" role="tablist">
-		<li class="nav-item">
-			<a class="nav-link active" id="newnote-tab" data-toggle="tab" href="#newnote" role="tab" aria-controls="newnote" aria-selected="true">Home</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-		</li>
-	</ul>
-	<div class="tab-content" id="myTabContent">
-		<div class="tab-pane fade" id="newnote" role="tabpanel" aria-labelledby="newnote-tab">Create new note</div>
-		<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">This is your profile</div>
-		<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
+	<div class="container-fluid" align="center" style="mid-height:100%">
+		{% block body %}{% endblock %}
 	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
