@@ -11,4 +11,4 @@ def newnote():
     return render_template("newnote.html")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
