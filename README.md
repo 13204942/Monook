@@ -3,13 +3,13 @@
 1. Pull the project from github.
 
 2. Navigate to the project folder ../Monook/
-..* Linux/MacOS
+* Linux/MacOS
 Run below commands 
 ``` 
 $ export FLASK_APP=__index__.py
 $ flask run
 ```
-..* Windows
+* Windows
 Open Powershell and run below commands
 ```
 > $env:FLASK_APP = "__index__.py"
