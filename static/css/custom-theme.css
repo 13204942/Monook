@@ -1,0 +1,9 @@
+.center_div{
+    margin: 0 auto;
+    width: 100% /* value of your choice which suits your alignment */
+}
+
+[type="checkbox"]
+{
+    vertical-align:middle;
+}

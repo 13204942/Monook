@@ -2,23 +2,33 @@
 
 {% block body %}
 
+<div class="container">
 	<div class="row">
-		<div class="col-lg-6 col-centered">
-			<form>
-			<div class="form-group">
-				<label for="title">Note Title</label>
-				<input type="text" class="form-control" id="title" placeholder="Enter Title">
+		<div class="col-6"></div>
+		<div class="col-6">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<form>
+				<div class="form-group">
+					<label for="title">Note Title</label>
+					<input type="text" class="form-control" id="title" placeholder="Enter Title">
+				</div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<input type="text" class="form-control" id="description" placeholder="Add description">
+				</div>
+				<div class="col-md-12 text-center">
+					<p><input type=submit class="btn btn-primary" value=Submit></p>
+				</div>
+				</form>
 			</div>
-			<div class="form-group">
-				<label for="description">Description</label>
-				<input type="text" class="form-control" id="description" placeholder="Add description">
-			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
-			</form>
+			<div class="col-md-3"></div>
 		</div>
+		<div class="col-6"></div>
 	</div>
+</div>
 
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 	
 {% endblock %}
